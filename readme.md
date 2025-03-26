@@ -25,6 +25,11 @@ Una vez dentro del contenedor:
 * Arranca firefox (comando `firefox` en la terminal, te abrirá una ventana de firefox)
 * Navega a `OPTIONS -> SECURITY-> DEVICE MANAGER -> Boton "LOAD"` Valor: '/usr/lib/libpkcs11-dnie.so'
 
+# Copiando ficheros
+Si descargas algun justificante a la imagen docker y quieres descargarlo a tu local, los pasos son:
+* Guarda tus ficheros en /tmp/
+* Ejecuta el comando `docker ps` y encuentra el identificador de tu imagen. Algo como `e88dc32a90a4`
+* Ejecuta el comando `docker cp e88dc32a90a4:/tmp/ .` y se copiara el contenido del directorio `/tmp/` del contenedor, a tu host.
 
 # Tips
 * Recuerda probar con tarjeta DNI con el chip boca arriba, en el caso de mi tarjetero (Marca zoweetec) es asi.
